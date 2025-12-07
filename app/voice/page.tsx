@@ -82,7 +82,7 @@ const VoiceToTextProPage: React.FC = () => {
     // 🟢 START RECORDING
     try {
       setStatus("Getting session token...");
-      const res = await fetch("http://localhost:8000/token");
+      const res = await fetch("https://voicebc-1.onrender.com/token");
       const { token, error } = await res.json();
 
       if (error || !token) {
